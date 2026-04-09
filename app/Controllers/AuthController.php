@@ -55,7 +55,7 @@ class AuthController extends ResourceController
         }
 
         // Jika email & password cocok, buat token JWT-nya
-        $key = getenv('JWT_SECRET');
+        $key = getenv('JWT_SECRET'); // Ambil secret key dari .env, default 'bts2026' jika tidak ada
         $iat = time(); // Waktu token dibuat
         $exp = $iat + 3600; // Waktu token kadaluarsa (1 jam)
 
